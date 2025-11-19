@@ -38,7 +38,7 @@ def test_register_user(db_session):
     assert user.id is not None
     assert user.username == "juan123"
     assert user.email == "juan@example.com"
-
+    
     # Intento de autenticacion con las credenciales 
     auth_user = authenticate_user(db_session, username = "juan123", email = "juan@example.com")
 
